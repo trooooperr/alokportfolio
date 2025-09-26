@@ -4,7 +4,7 @@
   "description": "Portfolio website",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node node.js"
   },
   "dependencies": {
     "dotenv": "^17.2.1",
