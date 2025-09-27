@@ -1486,82 +1486,110 @@
   .form-btn ion-icon {
     font-size: 20px;
   }
+/* Success Dialogue Box */
+.success-dialogue-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 1000;
+}
 
-  /* Success Dialogue Box */
-  .success-dialogue-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-    z-index: 1000;
-  }
+.success-dialogue-overlay.visible {
+  opacity: 1;
+  visibility: visible;
+}
 
-  .success-dialogue-overlay.visible {
-    opacity: 1;
-    visibility: visible;
-  }
+.success-dialogue-box {
+  background: #2d2d2d;
+  color: #fff;
+  padding: 35px 25px;
+  border-radius: 16px;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+  transform: scale(0.9);
+  transition: transform 0.3s ease;
+  text-align: center;
+}
 
+.success-dialogue-overlay.visible .success-dialogue-box {
+  transform: scale(1);
+}
+
+.dialogue-icon {
+  font-size: 60px;
+  color: var(--orange-yellow-crayola);
+  display: block;
+  margin: 0 auto 20px auto;
+}
+
+.dialogue-title {
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.dialogue-message {
+  font-size: 16px;
+  color: #ccc;
+  margin-bottom: 25px;
+}
+
+.dialogue-close-btn {
+  background-color: var(--orange-yellow-crayola);
+  color: #222;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  margin: 0 auto;
+  transition: all 0.2s ease;
+}
+
+.dialogue-close-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+/* ✅ RESPONSIVENESS */
+@media (max-width: 480px) {
   .success-dialogue-box {
-    background: #2d2d2d;
-    color: #fff;
-    padding: 35px 25px;
-    border-radius: 16px;
-    max-width: 400px;
-    width: 100%;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
-    transform: scale(0.9);
-    transition: transform 0.3s ease;
-    text-align: center;
-  }
-
-  .success-dialogue-overlay.visible .success-dialogue-box {
-    transform: scale(1);
+    padding: 20px 15px;
+    border-radius: 12px;
   }
 
   .dialogue-icon {
-    font-size: 60px;
-    color: var(--orange-yellow-crayola);
-    display: block;
-    margin: 0 auto 20px auto;
+    font-size: 48px;
+    margin-bottom: 15px;
   }
 
   .dialogue-title {
-    font-size: 26px;
-    font-weight: 600;
-    margin-bottom: 10px;
+    font-size: 20px;
   }
 
   .dialogue-message {
-    font-size: 16px;
-    color: #ccc;
-    margin-bottom: 25px;
+    font-size: 14px;
+    margin-bottom: 20px;
   }
 
   .dialogue-close-btn {
-    background-color: var(--orange-yellow-crayola);
-    color: #222;
-    font-size: 16px;
-    font-weight: 600;
-    padding: 12px 25px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    text-align: center;
-    margin: 0 auto;
+    font-size: 15px;
+    padding: 12px;
+    width: 100%; /* Full-width button for mobile */
   }
-
-  .dialogue-close-btn:hover {
-    opacity: 0.9;
-    transform: translateY(-2px);
-  }
+}
 
   /*-----------------------------------*\
 #RESPONSIVE
@@ -2417,14 +2445,14 @@
             </li>
             <li class="timeline-item">
               <h4 class="h4 timeline-item-title">Red Rose Public School</h4>
-              <span>2020 — 2022</span>
+              <span>2022</span>
               <p class="timeline-text">
                 Completed Intermediate with 82%, building a strong academic foundation while nurturing a passion for technological innovation and creativity.
               </p>
             </li>
             <li class="timeline-item">
               <h4 class="h4 timeline-item-title">Red Rose Public School</h4>
-              <span>2018 — 2020</span>
+              <span>2020</span>
               <p class="timeline-text">
                 Completed High School with 94%, establishing a strong academic foundation and developing a deep interest in technology.
               </p>
