@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Alok's Portfolio</title>
+  <link rel="preload" as="image" href="images/profile-photo.webp" type="image/webp">
   <link rel="shortcut icon" href="images/main_avatar.png" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -2229,7 +2230,10 @@
     <aside class="sidebar" data-sidebar>
       <div class="sidebar-info">
         <figure class="avatar-box">
-          <img src="images/profile-photo.png" alt="Alok Avatar" class="profile-photo" loading="lazy">
+          <picture>
+            <source srcset="images/profile-photo.webp" type="image/webp">
+            <img src="images/profile-photo.png" alt="Alok Avatar" class="profile-photo" fetchpriority="high" loading="eager" decoding="async">
+          </picture>
         </figure>
         <div class="info-content">
           <h1 class="name" title="Alok Kumar Gupta">Alok Kumar Gupta</h1>
